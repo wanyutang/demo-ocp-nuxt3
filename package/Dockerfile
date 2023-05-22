@@ -10,6 +10,12 @@ COPY . .
 # 安裝相依套件
 RUN npm install
 
+# 設定使用者和群組為 node
+RUN chown -R node:node /app
+
+# 切換使用者為 node
+USER node
+
 # 建構專案
 #RUN npm run build
 
