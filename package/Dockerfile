@@ -16,5 +16,8 @@ RUN npm install
 # 發佈網站
 #CMD ["npx", "nuxt", "start"]
 
+# 開放Nuxt應用程式的預設埠
+EXPOSE 3000
+
 # 定義執行時指令
 CMD ["npm", "run", "dev"]
