@@ -7,13 +7,13 @@ WORKDIR /app
 # 複製專案文件到容器中
 COPY . .
 
+# 安裝相依套件
+RUN npm install
+
 # 設定使用者和群組為 node
 RUN chown -R node:node /app
 
 # RUN chmod -R 777 /app
-
-# 安裝相依套件
-RUN npm install
 
 # 切換使用者為 node
 USER node
@@ -24,10 +24,10 @@ USER node
 # 發佈網站
 #CMD ["npx", "nuxt", "start"]
 
-RUN echo "Executing as $(whoami)"
-
 # 開放Nuxt應用程式的預設埠
 EXPOSE 3000
 
 # 定義執行時指令
-CMD ["npm", "run", "dev"]
+#CMD ["npm", "run", "dev"]
+
+CMD whoami && npm run dev
