@@ -15,7 +15,7 @@ RUN mkdir .nuxt
 # 設定使用者和群組為 node
 RUN chown -R node:node /app
 
-# RUN chmod -R 777 /app
+RUN chmod -R 777 /app/.nuxt
 
 # 切換使用者為 node
 USER node
