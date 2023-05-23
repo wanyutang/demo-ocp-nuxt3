@@ -10,6 +10,8 @@ COPY . .
 # 安裝相依套件
 RUN npm install
 
+RUN mkdir .nuxt
+
 # 設定使用者和群組為 node
 RUN chown -R node:node /app
 
