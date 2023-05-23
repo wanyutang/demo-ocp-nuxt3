@@ -13,12 +13,12 @@ RUN npm install
 # RUN mkdir .nuxt
 
 # 設定使用者和群組為 node
-# RUN chown -R node:node /app
+RUN chown -R node:node /app
 
-# RUN chmod -R 777 /app/.nuxt
+RUN chmod -R 777 /app
 
 # 切換使用者為 node
-# USER node
+USER node
 
 # 建構專案
 #RUN npm run build
