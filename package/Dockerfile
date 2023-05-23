@@ -29,6 +29,10 @@ RUN npm install
 # 開放Nuxt應用程式的預設埠
 EXPOSE 3000
 
+# 容器內 我們 nuxt 的 host 和 port 指定給環境變數
+ENV NUXT_HOST=0.0.0.0
+ENV NUXT_PORT=3000
+
 # 定義執行時指令
 CMD ["npm", "run", "dev"]
 
